@@ -11,7 +11,7 @@
 <a href="https://github.com/"><img src="logo/GitHub.svg" width="50" height="50"  alt="GITHUB"/></a>
 <a href="https://junit.org/junit5/"><img src="logo/JUnit5.svg" width="50" height="50"  alt="JUnit5"/></a>
 <a href="https://gradle.org/"><img src="logo/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>
-<a href="https://https://allurereport.org/"><img src="logo/Allure_Report.svg" width="50" height="50"  alt="Allure Report"/></a>
-<a href="https://https://www.jenkins.io/"><img src="logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
-<a href="https://https://https://web.telegram.org/"><img src="logo/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
+<a href="https://allurereport.org/"><img src="logo/Allure_Report.svg" width="50" height="50"  alt="Allure Report"/></a>
+<a href="https:://www.jenkins.io/"><img src="logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
+<a href="https://web.telegram.org/"><img src="logo/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
 </p>
