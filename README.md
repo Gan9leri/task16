@@ -15,3 +15,12 @@
 <a href="https://www.jenkins.io/"><img src="logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
 <a href="https://web.telegram.org/"><img src="logo/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
 </p>
+
+## :pushpin: Описание тестов:
+- ✓ *getSingleUserTest() - Позитивный тест получения данных пользователяа*
+- ✓ *getSingleUserNotFoundTest() - Негативный тест получения данных пользователя* 
+- ✓ *getSingleResourceTest() - Позитивный тест получения данных материала*
+- ✓ *getSingleResourceNotFoundTest() - Негативный тест получения данных материала*
+- ✓ *postCreateUserTest() - Позитивный тест создания пользователя*
+- ✓ *putUpdateUserTest() - Позитивный тест обновления пользователя*
+- ✓ *deleteUserTestTest() - Позитивный тест удаления пользователя*
