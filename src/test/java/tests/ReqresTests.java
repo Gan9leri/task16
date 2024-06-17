@@ -1,15 +1,12 @@
 package tests;
-
 import models.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 import static specs.ReqresSpecs.*;
-
 
 @DisplayName("API тесты")
 @Tag("api")
@@ -71,10 +68,10 @@ public class ReqresTests extends TestBase {
     @Tag("tag_postCreateUserTest")
     @Test
     void postCreateUserTest() {
-        createUserBodyModel userData = new createUserBodyModel();
+        UserBodyModel userData = new UserBodyModel();
         userData.setName("morpheus");
         userData.setJob("leader");
-        createUserResponseModel response =
+        UserResponseModel response =
                 step("Отправить POST запрос на создание пользователя ", () ->
                 given(reqresRequestSpec)
                         .body(userData)
@@ -82,7 +79,7 @@ public class ReqresTests extends TestBase {
                         .post("/users")
                         .then()
                         .spec(responseWithStatusCode201)
-                        .extract().as(createUserResponseModel.class));
+                        .extract().as(UserResponseModel.class));
         step("Проверить имя пользователя в ответе", () ->
             assertThat(response.getName()).isEqualTo("morpheus"));
         step("Проверить фамилию пользователя в ответе", () ->
@@ -93,17 +90,18 @@ public class ReqresTests extends TestBase {
     @Tag("tag_putUpdateUserTest")
     @Test
     void putUpdateUserTest(){
-        updateUserBodyModel userUpdate = new updateUserBodyModel();
+        UpdateUserBodyModel userUpdate = new UpdateUserBodyModel();
         userUpdate.setName("morpheus");
         userUpdate.setJob("zion resident");
-        updateUserResponseModel response = step("Отправить PUT запрос на обновление пользователя ", () ->
+        UpdateUserResponseModel response =
+                step("Отправить PUT запрос на обновление пользователя ", () ->
             given(reqresRequestSpec)
                     .body(userUpdate)
                     .when()
                     .put("/users/2")
                     .then()
                     .spec(responseWithStatusCode200)
-                    .extract().as(updateUserResponseModel.class));
+                    .extract().as(UpdateUserResponseModel.class));
         step("Проверить имя в ответе", () ->
             assertThat(response.getName()).isEqualTo("morpheus"));
         step("Проверить работу в ответе", () ->

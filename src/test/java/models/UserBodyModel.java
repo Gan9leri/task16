@@ -2,6 +2,6 @@ package models;
 import lombok.Data;
 
 @Data
-public class updateUserBodyModel {
+public class UserBodyModel {
     String name, job;
 }

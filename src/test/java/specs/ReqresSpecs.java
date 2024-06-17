@@ -1,22 +1,11 @@
 package specs;
-
-import io.restassured.RestAssured;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import models.*;
-import org.apache.http.impl.io.DefaultHttpResponseWriter;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-
 import static helpers.CustomAllureListener.withCustomTemplates;
-import static io.qameta.allure.Allure.step;
-import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.with;
 import static io.restassured.http.ContentType.JSON;
-import static org.junit.jupiter.api.Assertions.*;
-import static specs.ReqresSpecs.*;
 
 public class ReqresSpecs {
 
@@ -44,7 +33,4 @@ public class ReqresSpecs {
             .expectStatusCode(204)
             .log(LogDetail.ALL)
             .build();
-
-
-
 }
